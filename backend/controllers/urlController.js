@@ -9,7 +9,7 @@ exports.shortenUrl = async (req, res) => {
   try {
     const { url, customCode } = req.body;
 
-    const userId = req.user?.userId || req.user?.id; // ✅ FIX
+    const userId = req.user?.userId || req.user?.id; 
 
     if (!userId) {
       return res.status(401).json({
