@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const clickQueue = require("../queues/clickQueue");
 const Url = require("../models/Url");
 
-mongoose.connect("mongodb+srv://shivamaniboina_db_user:iCFDU9G9U9LMS46o@cluster0.1p2ctiw.mongodb.net/?appName=Cluster0")
+mongoose.connect(process.env.MONGO_DB_URI)
 .then(() => {
     console.log("Worker MongoDB Connected");
 })
